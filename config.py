@@ -1,0 +1,2 @@
+DEBUG = True
+PORT = 4500
