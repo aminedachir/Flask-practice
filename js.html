@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            window.onload = page;
+                function page(){
+                    for (i=0;i<2;i++){
+                        setpage(i);
+                }
+            }
+            function setpage(moh){
+                cur = "submit" + moh;
+                newnumber = Math.floor(Math.random()*75)+1;
+                document.getElementById(cur) .innerHTML = newnumber;
+            }
+        </script>
+        <p id="submit0"></p>
+        <p id="submit1"></p>
+    </body>
+</html>
