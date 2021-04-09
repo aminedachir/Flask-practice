@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: white;
+			color: black;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = newCard;
+		function newCard(){
+			for (i=0; i<2;i++){
+				SetSquare(i);
+			}
+		}
+		function SetSquare(thisSquare){
+			currSquare = "square" + thisSquare;
+			newNum = Math.floor(Math.random() * 75) + 1;
+			document.getElementById(currSquare). innerHTML = newNum;
+		}
+	</script>
+</head>
+<body>
+	<p id="square0">3</p>
+	<p id="square1">&nbsp</p>
+</body>
+</html>
