@@ -1,9 +1,13 @@
 from flask import Flask 
-from SQL
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from config import config
 
 app = Flask(__name__)
 
-db = SQL("sqlite:///app.db")
+db = SQLAlchemy(app)
+migrate = Migrate(db, app)
+
 
 @app.route('/')
 def home():
