@@ -1,21 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask 
+from SQL
+
 app = Flask(__name__)
 
-@app.route("/")
-def hom():
-   return render_template('Welcome.html')
+db = SQL("sqlite:///app.db")
 
-@app.route("/Division")
-def dv():
-   return render_template('Division.html')
-
-@app.route("/multiplication")
-def homes():
-   return render_template('multiplication.html')
+@app.route('/')
+def home():
+	return "hello"
 
 if __name__ == '__main__':
-   app.run(port=1234, debug = True)
-
+	app.run()
 
 
 
